@@ -5,7 +5,7 @@ import hello.advanced.trace.TraceStatus;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class FleidLogTrace implements LogTrace {
+public class FieldLogTrace implements LogTrace {
 
     private static final String START_PREFIX = "-->";
     private static final String COMPLETE_PREFIX = "<--";
