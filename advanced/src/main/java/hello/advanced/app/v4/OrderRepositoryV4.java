@@ -1,4 +1,4 @@
-package hello.advanced.app.v4.v3;
+package hello.advanced.app.v4;
 
 import org.springframework.stereotype.Repository;
 
