@@ -3,6 +3,7 @@ package hello.advanced.trace.strategy;
 import org.junit.jupiter.api.Test;
 
 import hello.advanced.trace.strategy.code.strategy.ContextV1;
+import hello.advanced.trace.strategy.code.strategy.Strategy;
 import hello.advanced.trace.strategy.code.strategy.StrategyLogic1;
 import hello.advanced.trace.strategy.code.strategy.StrategyLogic2;
 import lombok.extern.slf4j.Slf4j;
@@ -48,6 +49,66 @@ public class ContextV1Test {
 		StrategyLogic2 strategyLogic2 = new StrategyLogic2();
 		ContextV1 contextV2 = new ContextV1(strategyLogic2);
 		contextV2.execute();
+	}
+
+	/**
+	 * 전략패턴 익명 내부 클래스 사용
+	 */
+	@Test
+	void strategyV2() {
+		Strategy strategyLogic1 = new Strategy() {
+			@Override
+			public void call() {
+				log.info("비즈니스 로직 실행1");
+			}
+		};
+		log.info("strategyLogic1={}", strategyLogic1.getClass());
+		ContextV1 context1 = new ContextV1(strategyLogic1);
+		context1.execute();
+
+		Strategy strategyLogic2 = new Strategy() {
+			@Override
+			public void call() {
+				log.info("비즈니스 로직 실행2");
+			}
+		};
+		log.info("strategyLogic2={}", strategyLogic2.getClass());
+		ContextV1 context2 = new ContextV1(strategyLogic2);
+		context2.execute();
+	}
+
+	/**
+	 * 전략패턴 익명 내부 클래스 사용 (inline)
+	 */
+	@Test
+	void strategyV3() {
+		ContextV1 context1 = new ContextV1(new Strategy() {
+			@Override
+			public void call() {
+				log.info("비즈니스 로직 실행1");
+			}
+		});
+		context1.execute();
+
+		ContextV1 context2 = new ContextV1(new Strategy() {
+			@Override
+			public void call() {
+				log.info("비즈니스 로직 실행2");
+			}
+		});
+		context2.execute();
+	}
+
+	/**
+	 * 전략패턴 익명 내부 클래스 사용 (lambda)
+	 */
+	@Test
+	void strategyV4() {
+		ContextV1 context1 = new ContextV1(() -> log.info("비즈니스 로직 실행1"));
+		context1.execute();
+
+		ContextV1 context2 = new ContextV1(() -> log.info("비즈니스 로직 실행2"));
+		context2.execute();
 	}
 
 }
