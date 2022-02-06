@@ -1,4 +1,4 @@
-package hello.proxy.jdcdynamic;
+package hello.proxy.jdkdynamic;
 
 import java.lang.reflect.Method;
 
@@ -27,7 +27,7 @@ public class ReflectionTest {
 	@Test
 	void reflection1() throws Exception {
 		// 클래스 정보
-		Class<?> classHello = Class.forName("hello.proxy.jdcdynamic.ReflectionTest$Hello");
+		Class<?> classHello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
 		Hello target = new Hello();
 
 		//callA 메서드 정보
@@ -44,7 +44,7 @@ public class ReflectionTest {
 	@Test
 	void reflection2() throws Exception {
 		// 클래스 정보
-		Class<?> classHello = Class.forName("hello.proxy.jdcdynamic.ReflectionTest$Hello");
+		Class<?> classHello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
 		Hello target = new Hello();
 
 		//callA 메서드 정보
