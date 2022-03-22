@@ -11,6 +11,7 @@ import hello.proxy.app.v1.OrderRepositoryV1;
 import hello.proxy.app.v1.OrderRepositoryV1Impl;
 import hello.proxy.app.v1.OrderServiceV1;
 import hello.proxy.app.v1.OrderServiceV1Impl;
+import hello.proxy.config.v2_dynamicproxy.handler.LogTraceBasicHandler;
 import hello.proxy.trace.logtrace.LogTrace;
 
 @Configuration

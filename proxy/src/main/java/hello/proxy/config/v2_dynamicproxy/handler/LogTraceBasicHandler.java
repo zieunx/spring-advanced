@@ -1,4 +1,4 @@
-package hello.proxy.config.v2_dynamicproxy;
+package hello.proxy.config.v2_dynamicproxy.handler;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
