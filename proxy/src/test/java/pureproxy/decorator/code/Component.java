@@ -1,4 +1,4 @@
-package hello.proxy.pureproxy.decorator.code;
+package pureproxy.decorator.code;
 
 public interface Component {
 	String operation();
