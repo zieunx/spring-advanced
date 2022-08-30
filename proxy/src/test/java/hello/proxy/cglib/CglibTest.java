@@ -1,6 +1,6 @@
 package hello.proxy.cglib;
 
-import hello.common.service.ConcreteService;
+import hello.proxy.common.service.ConcreteService;
 import hello.proxy.cglib.code.TimeMethodInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
