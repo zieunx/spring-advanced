@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Import;
 @SpringBootTest
 public class AtAnnotationTest {
 
-    @Qualifier("memberServiceImpl")
     @Autowired
     MemberService memberService;
 
