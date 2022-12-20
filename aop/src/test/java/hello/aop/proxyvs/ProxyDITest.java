@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Import;
 @Slf4j
 @Import(ProxyDIAspect.class)
 //@SpringBootTest(properties = "spring.aop.proxy-target-class=false") // jdk 프록시
-@SpringBootTest(properties = "spring.aop.proxy-target-class=true") // cglib 프록시
+//@SpringBootTest(properties = "spring.aop.proxy-target-class=true") // cglib 프록시
+@SpringBootTest // default 는 cglib 이기 때문에 잘 동작된다.
 public class ProxyDITest {
 
     @Autowired
